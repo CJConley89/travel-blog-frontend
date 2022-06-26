@@ -51,5 +51,3 @@ export const getStaticProps = async({ preview = false }) => {
 }
 
 export default Home
-
-

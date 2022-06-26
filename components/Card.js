@@ -20,10 +20,10 @@ const Card = forwardRef(({ onClick, href, post }, ref) => {
             <div className="info-container">
                 <p>Posted by: {username}</p>
                 <img
-                className="avatar"
-                alt={username + ' avatar'}
-                src={urlFor(authorImage)}
-            />
+                    className="avatar"
+                    alt={username + ' avatar'}
+                    src={urlFor(authorImage)}
+                />
             </div>
 
             <div className="tag-container">
