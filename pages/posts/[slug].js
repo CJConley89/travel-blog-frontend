@@ -4,12 +4,13 @@ import { PortableText } from '@portabletext/react'
 import { urlFor } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import Map from '../../components/Map'
+import Image from 'next/image'
 
 const PostComponents = {
     types: {
         image: ({ value }) => {
             return (
-                <img
+                <Image
                     className="post-image"
                     alt={value.alt || ' '}
                     src={urlFor(value)}
@@ -28,7 +29,7 @@ const Post = ({ post }) => {
                 <h1>{title}</h1>
                 
                 <div className="info-container">
-                    <img
+                    <Image
                         className="main-image-post-view"
                         alt={title + ' image'}
                         src={urlFor(mainImage)}
@@ -38,7 +39,7 @@ const Post = ({ post }) => {
                             <Map longitude={postedAt.lng} latitude={postedAt.lat}/>
                         </div>
                         <div className='author-container'>
-                            <img
+                            <Image
                                 className='avatar'
                                 src={urlFor(authorImage).url()}
                                 alt={username + ' avatar'}
