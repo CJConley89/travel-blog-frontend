@@ -6,7 +6,6 @@ import Card from '../components/Card'
 
 
 const Home = ({ posts }) => {
-
   return (
     <div className="dashboard">
       <Head>
@@ -22,7 +21,7 @@ const Home = ({ posts }) => {
             as={`/posts/${post.slug.current}`}
             passHref
           >
-            <Card post={post}> </Card>
+            <Card post={post}/>
           </Link>
         ))}
       </div>

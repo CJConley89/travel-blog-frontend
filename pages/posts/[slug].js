@@ -21,7 +21,6 @@ const PostComponents = {
 
 const Post = ({ post }) => {
     const { title, categories, body, authorImage, username, about, postedAt, mainImage } = post
-
     return (
         <>
             { post && <article className="post-container">
@@ -87,7 +86,7 @@ export async function getStaticPaths() {
 
     return {
         paths: paths.map((slug) => ({params: { slug }})),
-        fallback: true,
+        fallback: false,
     }
 }
 
@@ -97,7 +96,7 @@ export async function getStaticProps({params, preview = false}){
     return {
         props: {
             post,
-        }
+        },
     }
 }
 
