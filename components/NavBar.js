@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import logo from '../public/travel-blog-logo.jpg'
 const NavBar = () => {
@@ -6,7 +5,7 @@ const NavBar = () => {
         <nav className='nav-container'>
             <div className='nav-item-container' id='nav-image-home'>
                 <Link href='/'>
-                    <Image 
+                    <img 
                         className='nav-bar-image'
                         src={logo}
                         alt='Travel Blog Logo'
