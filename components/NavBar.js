@@ -7,7 +7,7 @@ const NavBar = () => {
                 <Link href='/'>
                     <img 
                         className='nav-bar-image'
-                        src={logo}
+                        src={urlFor(logo)}
                         alt='Travel Blog Logo'
                     />
                 </Link>
